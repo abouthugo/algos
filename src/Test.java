@@ -2,13 +2,21 @@ import DataStructures.MinStack;
 import Permutations.NextPerm;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Stack;
 
 public class Test {
 
     public static void main(String[] args) {
-        int[] nums = {3,2,1};
-        NextPerm nxt = new NextPerm(nums);
+        List<String> dict = new LinkedList<>();
+        dict.add("cat");
+        dict.add("cats");
+        dict.add("dog");
+        dict.add("and");
+//        dict.add("sand");
+        WordBreak wordBreak = new WordBreak("catsandog", dict);
+        wordBreak.mySolution("catsanddog", dict);
     }
 
     public static int firstUniqChar(String s) {
